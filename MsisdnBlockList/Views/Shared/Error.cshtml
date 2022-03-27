@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Error";
+}
+
+<h2 class="text-danger">Dogodila se pogreška prilikom učitavanja zahtjeva.</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <p>
+        <code>@ViewBag.Message</code>
+    </p>
+}
+
+

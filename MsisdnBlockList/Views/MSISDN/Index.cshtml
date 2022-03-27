@@ -1,0 +1,95 @@
+﻿@model IEnumerable<MsisdnBlockList.Models.MSISDN>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Pretraživanje brojeva telefona</h2>
+<p>
+    <a asp-action="Create" role="button" class="btn btn-success">Kreiraj novi</a>
+</p>
+<form asp-action="Search" method="get">
+    <div class="input-group mb-2">
+        <input class="form-control" min="6" 
+               data-val="true" data-val-maxlength="Maksimalno 13 znakova" data-val-minlength="Minimalno 6 znakova" data-val-minlength-min="6" data-val-maxlength-max="13" data-val-regex="Potrebno barem 6 znamenki broja za pretraživanje" data-val-regex-pattern="((?+/[0-9]{6,}))" data-val-required="Potrebno je navesti MSISDN"
+               style="border-radius:5px;" type="text" name="Msisdn" placeholder="Pretraži broj telefona" value="@ViewBag.MSISDN">
+        <span class="text-danger field-validation-valid" data-valmsg-for="Msisdn" data-valmsg-replace="true"></span>
+    </div>
+</form>
+@if (!string.IsNullOrEmpty(ViewBag.Message) || ViewBag.Message != null)
+{
+    <div class="alert alert-warning"><span>@Html.Raw(ViewBag.Message)</span></div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.msisdn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.modified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.user_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.msisdn)
+                </td>
+                <td>
+                    @if (@item.modified != null)
+                    {    
+                        @item.modified.Value.ToString("dd.MM.yyyy HH:mm")
+                    }
+                    else
+                    {
+                        @item.modified
+                    }
+                </td>
+                <td>
+                    @item.created.ToString("dd.MM.yyyy HH:mm")
+                </td>
+                <td>
+                    @item.user.user_name
+                </td>
+                <td>
+                    @if (item.status != 0)
+                    {
+                        <span class="badge badge-primary">Blokiran</span>
+                    }
+                </td>
+                <td>
+                    @if (item.status != 0)
+                    {
+                        <a href="/MSISDN/Unblock/@item.msisdn_id?search=@ViewBag.MSISDN" class="btn btn-primary">Odblokiraj</a>
+                    }
+                    else
+                    {
+                        <a href="/MSISDN/Block/@item.msisdn_id?search=@ViewBag.MSISDN" class="btn btn-primary">Blokiraj</a>
+                    }
+                </td>
+                <td>
+                    <a href="/MSISDN/History/@item.msisdn_id" class="btn btn-success" role="button" asp value="Prikaži">Povijest promjena</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,351 @@
+2020-10-01 10:07:17,831  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-01 10:07:17,976  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-01 10:07:17,981  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-01 10:07:17,986  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-01 10:07:17,990  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-01 10:14:40,760  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-01 10:14:40,908  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-01 10:14:40,918  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-01 10:14:40,925  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-01 10:14:40,931  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-01 10:23:36,353  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-01 10:23:36,521  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-01 10:23:36,525  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-01 10:23:36,529  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-01 10:23:36,533  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-01 10:23:44,225 ERROR MsisdnBlockList.Controllers.MSISDNController.Log [0] - MESSAGE: Error message Access denied for user 'microprojectdb'@'localhost' (using password: YES)
+ 2020-10-01 10:23:44,276 ERROR MsisdnBlockList.Controllers.MSISDNController.Log [0] - MESSAGE: Source System.Private.CoreLib
+ 2020-10-01 10:23:44,317 ERROR MsisdnBlockList.Controllers.MSISDNController.Log [0] - MESSAGE: Stack    at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ServerSession.cs:line 426
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ConnectionPool.cs:line 112
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ConnectionPool.cs:line 141
+   at MySql.Data.MySqlClient.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Nullable`1 ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 645
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 312
+   at MySql.Data.MySqlClient.MySqlConnection.Open() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 280
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlRelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at MsisdnBlockList.Controllers.MSISDNController.GetUserID() in C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList\Controllers\MsisdnController.cs:line 66
+   at MsisdnBlockList.Controllers.MSISDNController.Index(String msisdn) in C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList\Controllers\MsisdnController.cs:line 30
+ 2020-10-01 10:27:09,088  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-01 10:27:09,277  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-01 10:27:09,283  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-01 10:27:09,288  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-01 10:27:09,294  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-01 12:29:06,874  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-01 12:29:07,082  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-01 12:29:07,087  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-01 12:29:07,093  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-01 12:29:07,098  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-01 12:29:40,634  INFO MsisdnBlockList.Controllers.MSISDNController.Log [0] - MESSAGE: Number found?
+ 2020-10-01 12:29:40,671  INFO MsisdnBlockList.Controllers.MSISDNController.Log [0] - MESSAGE: Number found... redirecting.
+ 2020-10-02 11:25:58,506  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:25:59,131  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:25:59,286  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:25:59,324  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:25:59,343  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:28:47,538  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:28:47,698  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:28:47,705  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:28:47,712  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:28:47,718  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:31:10,802  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:31:11,019  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:31:11,025  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:31:11,031  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:31:11,038  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:38:04,171  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:38:04,393  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:38:04,402  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:38:04,414  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:38:04,456  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:42:18,350  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:42:18,685  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:42:18,753  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:42:18,885  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:42:19,130  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:43:12,245  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:43:12,424  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:43:12,430  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:43:12,435  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:43:12,440  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:44:58,866  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:44:59,032  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:44:59,040  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:44:59,047  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:44:59,060  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:47:41,186  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:47:41,364  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:47:41,369  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:47:41,373  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:47:41,378  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:49:38,005  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:49:38,190  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:49:38,212  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:49:38,223  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:49:38,231  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:51:06,660  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:51:06,782  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:51:06,787  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:51:06,791  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:51:06,795  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:57:01,913  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:57:01,996  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:57:01,997  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:57:01,998  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:57:01,998  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:58:49,417  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:58:49,624  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:58:49,630  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:58:49,636  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:58:49,642  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 11:59:46,364  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 11:59:46,433  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 11:59:46,434  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 11:59:46,434  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 11:59:46,435  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:04:36,859  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:04:36,972  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:04:36,973  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:04:36,975  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:04:36,976  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:06:42,711  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:06:42,803  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:06:42,805  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:06:42,806  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:06:42,808  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:09:16,512  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:09:16,612  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:09:16,612  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:09:16,613  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:09:16,614  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:15:46,286  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:15:46,383  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:15:46,384  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:15:46,385  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:15:46,385  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:20:48,245  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:20:48,465  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:20:48,471  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:20:48,476  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:20:48,481  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:22:26,913  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:22:27,078  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:22:27,082  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:22:27,089  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:22:27,093  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:29:41,621  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:29:41,801  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:29:41,809  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:29:41,816  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:29:41,824  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:34:43,979  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:34:44,148  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:34:44,153  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:34:44,160  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:34:44,166  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:35:35,685  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:35:35,876  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:35:35,882  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:35:35,887  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:35:35,893  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:36:40,374  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:36:40,561  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:36:40,566  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:36:40,571  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:36:40,576  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:43:56,598  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:43:56,814  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:43:56,821  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:43:56,828  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:43:56,835  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 12:59:10,935  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 12:59:11,093  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 12:59:11,100  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 12:59:11,107  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 12:59:11,114  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 13:36:11,739  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 13:36:11,891  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 13:36:11,896  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 13:36:11,907  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 13:36:11,920  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 13:41:31,068  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 13:41:31,226  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 13:41:31,230  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 13:41:31,235  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 13:41:31,239  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:00:55,512  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:00:55,730  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:00:55,733  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:00:55,736  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:00:55,737  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:10:41,750  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:10:41,907  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:10:41,945  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:10:41,971  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:10:41,990  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:13:33,308  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:13:33,507  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:13:33,513  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:13:33,519  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:13:33,524  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:16:52,392  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:16:52,562  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:16:52,572  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:16:52,588  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:16:52,595  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:18:45,391  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:18:45,685  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:18:45,692  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:18:45,699  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:18:45,704  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:20:35,335  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:20:36,104  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:20:36,274  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:20:36,425  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:20:36,473  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:25:00,679  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:25:01,267  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:25:01,354  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:25:01,388  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:25:01,411  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:27:39,791  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:27:40,313  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:27:40,363  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:27:40,373  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:27:40,394  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:30:01,058  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:30:01,274  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:30:01,295  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:30:01,323  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:30:01,407  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:31:33,945  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:31:34,468  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:31:34,496  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:31:34,507  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:31:34,517  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:34:38,130  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:34:38,296  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:34:38,303  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:34:38,311  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:34:38,318  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:35:42,128  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:35:42,802  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:35:42,841  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:35:42,893  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:35:42,929  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:36:35,592  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:36:36,254  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:36:36,267  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:36:36,277  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:36:36,296  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:37:17,945  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:37:18,032  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:37:18,034  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:37:18,036  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:37:18,037  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:45:17,409  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:45:17,636  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:45:17,665  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:45:17,719  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:45:17,790  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:47:46,501  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:47:46,649  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:47:46,650  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:47:46,651  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:47:46,653  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:49:26,458  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:49:26,727  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:49:26,737  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:49:26,744  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:49:26,751  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:50:24,910  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:50:25,084  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:50:25,091  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:50:25,097  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:50:25,102  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:54:30,674  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:54:30,844  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:54:30,849  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:54:30,859  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:54:30,870  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:55:23,011  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:55:23,249  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:55:23,255  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:55:23,261  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:55:23,266  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 14:59:46,353  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 14:59:46,561  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 14:59:46,568  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 14:59:46,574  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 14:59:46,582  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 15:06:33,959  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 15:06:34,171  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 15:06:34,200  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 15:06:34,208  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 15:06:34,215  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 15:09:03,114  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 15:09:03,401  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 15:09:03,408  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 15:09:03,415  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 15:09:03,424  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-02 15:10:48,766  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-02 15:10:48,835  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-02 15:10:48,837  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-02 15:10:48,838  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-02 15:10:48,839  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-07 09:43:32,420  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-07 09:43:32,767  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-07 09:43:32,777  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-07 09:43:32,853  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-07 09:43:33,004  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-07 09:43:39,444 ERROR MsisdnBlockList.Controllers.MSISDNController.Log [0] - MESSAGE: Error message Input string was not in a correct format.
+ 2020-10-07 09:43:39,506 ERROR MsisdnBlockList.Controllers.MSISDNController.Log [0] - MESSAGE: Source System.Private.CoreLib
+ 2020-10-07 09:43:39,532 ERROR MsisdnBlockList.Controllers.MSISDNController.Log [0] - MESSAGE: Stack    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Number.ParseUInt32(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToUInt32(IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at MySql.Data.MySqlClient.MySqlConnectionStringValueOption`1.ChangeType(Object objectValue) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnectionStringBuilder.cs:line 703
+   at MySql.Data.MySqlClient.MySqlConnectionStringValueOption`1.GetValue(MySqlConnectionStringBuilder builder) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnectionStringBuilder.cs:line 674
+   at MySql.Data.MySqlClient.MySqlConnectionStringBuilder.get_Port() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnectionStringBuilder.cs:line 29
+   at MySqlConnector.Core.ConnectionSettings..ctor(MySqlConnectionStringBuilder csb) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ConnectionSettings.cs:line 42
+   at MySql.Data.MySqlClient.MySqlConnection.GetConnectionSettings() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 829
+   at MySql.Data.MySqlClient.MySqlConnection.get_Database() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlConnection.cs:line 354
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.LogConnectionError(IDiagnosticsLogger`1 diagnostics, IRelationalConnection connection, EventDefinition`2 definition)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.ConnectionError(IDiagnosticsLogger`1 diagnostics, IRelationalConnection connection, Exception exception, DateTimeOffset startTime, TimeSpan duration, Boolean logErrorAsDebug)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlRelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at MsisdnBlockList.Controllers.MSISDNController.GetUserID() in C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList\Controllers\MsisdnController.cs:line 66
+   at MsisdnBlockList.Controllers.MSISDNController.Index(String msisdn) in C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList\Controllers\MsisdnController.cs:line 30
+ 2020-10-07 10:27:15,221  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-07 10:27:15,506  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-07 10:27:15,513  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-07 10:27:15,522  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-07 10:27:15,527  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-07 10:30:04,490  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-07 10:30:04,741  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-07 10:30:04,748  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-07 10:30:04,772  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-07 10:30:04,840  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 2020-10-08 13:02:10,708  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: https://localhost:5001
+ 2020-10-08 13:02:13,434  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Now listening on: http://localhost:5000
+ 2020-10-08 13:02:13,442  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+ 2020-10-08 13:02:13,454  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Hosting environment: Development
+ 2020-10-08 13:02:13,461  INFO Microsoft.Hosting.Lifetime.Log [0] - MESSAGE: Content root path: C:\Users\marksant\OneDrive - Tele2\MsisdnBlockList\MsisdnBlockList\MsisdnBlockList
+ 

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MsisdnBlockList</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="MSISDN" asp-action="Index">Brojevi telefona</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <form class="form-inline my-2 my-lg-0" style="position:absolute; right: 0; margin-top:10px; padding-right:35px; border-radius: 15px;" asp-action="Search" method="get">
+                        <div class="input-group">
+                            <input class="form-control col-md-12" min="6" data-val="true" data-val-maxlength="Maksimalno 13 znakova" data-val-minlength="Minimalno 6 znakova" data-val-minlength-min="6" data-val-maxlength-max="13" data-val-regex="Potrebno barem 6 znamenki broja za pretraživanje" data-val-regex-pattern="((?+/[0-9]{6,}))" data-val-required="Potrebno je navesti MSISDN" style="border-radius: 5px;" type="text" placeholder="Pretraži" name="Msisdn" aria-label="Search" value="@ViewBag.MSISDN">
+                        </div>
+                    </form>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <ul class="nav navbar-nav showuser">
+                            <li class="nav-item">
+                                <a>@User.Identity.Name</a>
+                            </li>
+                        </ul>
+                    }
+                    else { 
+                        <div class="showuser">Login Failed. Try again.</div>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - MsisdnBlockList 
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
