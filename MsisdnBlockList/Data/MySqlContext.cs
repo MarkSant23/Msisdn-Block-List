@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MsisdnBlockList.Models;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace MsisdnBlockList.Data
         {            
             
         }
+
 
         public DbSet<MSISDN> msisdn { get; set; }
         public DbSet<User> user { get; set; }

@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    var returnUrl = ViewData["ReturnUrl"] as string;
+    var error = TempData["Error"] as string;
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+@if (!string.IsNullOrEmpty(error))
+{
+    <div id="sysinfo" class="alert alert-danger">@error</div>
+}
+
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+
+        <div class="card-body">
+            <img style="position:relative; top:-30px; width:300px; float:left; margin-right:25px;" src="~/homepage.jpg"/>
+            <h2 class="display-5">Dobrodošli u Msisdn aplikaciju</h2>
+            <p class="lead" style="display: block; margin-left: 15px;">Aplikacija za praćenje i blokiranje/odblokiranje brojeva telefona.</p>
+            <p><a href="https://docs.microsoft.com/aspnet/core" class="btn btn-alert-primary btn-lg">Za naučiti više &raquo;</a></p>
+        </div>
+
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <h4>Prijavite se</h4>
+        <form asp-controller="Account" asp-action="Login" method="post">
+
+          <!-- Username input -->
+          <div class="form-outline mb-4">
+            <input type="text" id="form3Example3" class="form-control form-control-lg" name="username"
+              placeholder="Unesite korisničko ime" />
+            <label class="form-label" for="form3Example3">Korisničko ime</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input type="password" id="form3Example4" class="form-control form-control-lg" name="password"
+              placeholder="Unesite lozinku" />
+            <label class="form-label" for="form3Example4">Lozinka</label>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+              <label class="form-check-label" for="form2Example3">
+                Zapamti me
+              </label>
+            </div>
+            <a href="#!" class="text-body">Zaboravili ste lozinku?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Nemate korisnički račun? <a href="#!"
+                class="link-danger">Registracija</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        setTimeout(function(){
+            $("#sysinfo").remove();
+        },3000);
+    });
+</script>

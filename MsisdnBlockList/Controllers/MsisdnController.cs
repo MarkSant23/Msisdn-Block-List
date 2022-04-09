@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MsisdnBlockList.Data;
@@ -23,7 +24,7 @@ namespace MsisdnBlockList.Controllers
             _context = context;
             _logger = logger;
         }
-        
+        [Authorize]
         public IActionResult Index(string msisdn)
         {
             try
@@ -78,6 +79,7 @@ namespace MsisdnBlockList.Controllers
             return nb.user_id;
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             try
@@ -98,6 +100,7 @@ namespace MsisdnBlockList.Controllers
             return RedirectToAction("Error", "Error", new { message = ex.Message });
         }
 
+        [Authorize(Roles ="Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("msisdn")] MSISDN m)
@@ -120,7 +123,6 @@ namespace MsisdnBlockList.Controllers
                         };
                         
                         _context.Add(number);
-                        
                         await _context.SaveChangesAsync();
                         ViewBag.Message = "MSISDN je kreiran.";
                         _logger.LogInformation("Got id", number.msisdn_id);
@@ -182,13 +184,14 @@ namespace MsisdnBlockList.Controllers
             }
         }
 
+        [Authorize]
         public IActionResult Search(string msisdn, MSISDN m, string phone_nbr, bool br_exists)
         {
             try
             {
                 var result = _context.msisdn.Include(u => u.user).Where(m => m.deleted == null && m.msisdn.StartsWith(msisdn)).ToList();
                 MSISDN number = _context.msisdn.Where(b => b.msisdn == m.msisdn && b.msisdn_id == m.msisdn_id).FirstOrDefault();
-                             
+                
                 if (ModelState.IsValid)
                 {
                     if (number == null)
@@ -199,7 +202,7 @@ namespace MsisdnBlockList.Controllers
                     {
                         ViewBag.Message = "Traženi broj je pronađen.";
                     }
-                    if (result.Count == 0)
+                    if (!br_exists && result.Count == 0)
                     {
                         ViewBag.Message = "Traženi broj <strong>nije</strong> pronađen.";
                     }

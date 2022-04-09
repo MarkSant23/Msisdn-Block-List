@@ -3,6 +3,12 @@
 @{
     ViewData["Title"] = "Index";
 }
+@*<div class="card-body">
+    @foreach (var item in User.Claims)
+   {
+       <span>@item.Type: @item.Value</span>
+   }
+</div>*@
 
 <h2>Pretraživanje brojeva telefona</h2>
 <p>
@@ -71,15 +77,19 @@
                     {
                         <span class="badge badge-primary">Blokiran</span>
                     }
+                    else
+                    {
+                        <span class="badge badge-primary">Odblokiran</span>
+                    }
                 </td>
                 <td>
                     @if (item.status != 0)
                     {
-                        <a href="/MSISDN/Unblock/@item.msisdn_id?search=@ViewBag.MSISDN" class="btn btn-primary">Odblokiraj</a>
+                        <a href="/MSISDN/Unblock/@item.msisdn_id?search=@item.msisdn" class="btn btn-primary">Odblokiraj</a>
                     }
                     else
                     {
-                        <a href="/MSISDN/Block/@item.msisdn_id?search=@ViewBag.MSISDN" class="btn btn-primary">Blokiraj</a>
+                        <a href="/MSISDN/Block/@item.msisdn_id?search=@item.msisdn" class="btn btn-primary">Blokiraj</a>
                     }
                 </td>
                 <td>
