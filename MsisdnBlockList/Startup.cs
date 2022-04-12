@@ -19,6 +19,7 @@ using Microsoft.Extensions.Logging;
 using MsisdnBlockList.Data;
 using MsisdnBlockList.Models;
 using Microsoft.AspNetCore.Authentication.OAuth;
+using MsisdnBlockList.Services;
 
 namespace MsisdnBlockList
 {
@@ -43,43 +44,45 @@ namespace MsisdnBlockList
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
                 options.UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));
             });
-
+            services.AddScoped<UserService>();
             services.AddAuthentication(opt =>
             {
                 opt.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                opt.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+                //opt.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+
             }).AddCookie(opt =>
             {
                 opt.LoginPath = "/login";
                 opt.AccessDeniedPath = "/denied";
 
-                //dajemo Adminu rolu pristupa stranici preko cookiea
                 opt.Events = new CookieAuthenticationEvents()
                 {
                     OnSigningIn = async context =>
                     {
-                        var principal = context.Principal;
-                        if (principal.HasClaim(k => k.Type == ClaimTypes.NameIdentifier))
+                        var scheme = context.Properties.Items.Where(k => k.Key == ".AuthScheme").FirstOrDefault();
+                        var claim = new Claim(scheme.Key, scheme.Value);
+                        var claimsIdentity = context.Principal.Identity as ClaimsIdentity;
+                        var userService = context.HttpContext.RequestServices.GetRequiredService(typeof(UserService)) as UserService;
+                        var nameIdentifier = claimsIdentity.Claims.FirstOrDefault(m => m.Type == ClaimTypes.NameIdentifier)?.Value;
+                        if (userService != null && nameIdentifier != null)
                         {
-                            if (principal.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value == "Mark")
+                            var appUser = userService.GetUserByExternalProvider(scheme.Value, nameIdentifier);
+                            if (appUser is null)
                             {
-                                var clIdenity = principal.Identity as ClaimsIdentity;
-                                clIdenity.AddClaim(new Claim(ClaimTypes.Role, "Admin"));
+                                appUser = userService.AddNewUser(scheme.Value, claimsIdentity.Claims.ToList());
+                            }
+                            foreach (var r in appUser.roleList)
+                            {
+                                claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, r));
                             }
                         }
-                        await Task.CompletedTask;
-                    },
-                    OnSignedIn = async context =>
-                    {
-                        await Task.CompletedTask;
-                    },
-                    OnValidatePrincipal = async context =>
-                    {
+                        claimsIdentity.AddClaim(claim);
                         await Task.CompletedTask;
                     }
                 };
             })
-            .AddGoogle(opt =>
+            .AddGoogle("google", opt =>
                 {
                      opt.ClientId = Configuration["Authentication:Google:ClientId"];
                      opt.ClientSecret = Configuration["Authentication:Google:ClientSecret"];

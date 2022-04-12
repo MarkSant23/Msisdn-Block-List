@@ -5,12 +5,12 @@
 }
 @*<div class="card-body">
     @foreach (var item in User.Claims)
-   {
+    {
        <span>@item.Type: @item.Value</span>
-   }
+    }
 </div>*@
 
-<h2>Pretraživanje brojeva telefona</h2>
+<h2 style="text-align:center">Pretraživanje brojeva telefona</h2>
 <p>
     <a asp-action="Create" role="button" class="btn btn-success">Kreiraj novi</a>
 </p>
@@ -44,8 +44,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.status)
             </th>
-            <th></th>
-            <th></th>
+
         </tr>
     </thead>
 

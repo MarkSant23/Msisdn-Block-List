@@ -15,8 +15,8 @@ namespace MsisdnBlockList.Data
         {            
             
         }
-
-
+        
+        public DbSet<AppUsers> appUsers { get; set; }
         public DbSet<MSISDN> msisdn { get; set; }
         public DbSet<User> user { get; set; }
         public DbSet<Log> log { get; set; }

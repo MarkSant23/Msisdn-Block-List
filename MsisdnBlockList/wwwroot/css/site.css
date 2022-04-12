@@ -59,10 +59,18 @@ button.accept-policy {
     background: #eee;
 }
 
-.h-custom {
-    height: calc(100% - 73px);
+.eye {
+    position: absolute;
+    right: 30px;
+    transform: translate(0, -50%);
+    top: 34.5%;
+    cursor: pointer;
 }
 
+/*.h-custom {
+    height: calc(100% - 73px);
+    width: 100%;
+}*/
 @media (max-width: 450px) {
     .h-custom {
         height: 100%;

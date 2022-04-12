@@ -535,3 +535,5 @@ D:\baze\MsisdnApp\MsisdnBlockList\obj\Debug\netcoreapp3.1\MsisdnBlockList.MvcApp
 D:\baze\MsisdnApp\MsisdnBlockList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
 D:\baze\MsisdnApp\MsisdnBlockList\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 D:\baze\MsisdnApp\MsisdnBlockList\obj\Debug\netcoreapp3.1\Razor\Views\Account\Denied.cshtml.g.cs
+D:\baze\MsisdnApp\MsisdnBlockList\obj\Debug\netcoreapp3.1\Razor\Views\Account\AddNewUser.cshtml.g.cs
+D:\baze\MsisdnApp\MsisdnBlockList\obj\Debug\netcoreapp3.1\MsisdnBlockList.csproj.AssemblyReference.cache
